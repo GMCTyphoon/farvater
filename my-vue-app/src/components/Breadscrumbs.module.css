@@ -1,0 +1,56 @@
+.breadcrumbs {
+  background-color: #262626;
+  padding: 0 84px;
+  height: 41px; /* Высота компонента */
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumbItem {
+  display: flex;
+  color: #d9d9d9;
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 12px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumbItem a {
+  display: flex;
+  color: #d9d9d9;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.breadcrumbItem a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbItem::after {
+  display: flex;
+  content: "/";
+  margin-left: 10px;
+  color: #d9d9d9;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumbItem:last-child::after {
+  content: "";
+}

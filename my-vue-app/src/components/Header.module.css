@@ -1,0 +1,312 @@
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding: 0.5rem 84px;
+  background-color: #262626;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.socialIcon {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+.socialIcon:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.userActions {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  height: 24px;
+}
+
+.link {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: "roboto";
+  height: 100%;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.link:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.userIcons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  height: 28px;
+}
+
+.userIcon {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+.userIcon:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.userButton {
+  display: flex;
+  background: #428d26; /* Зеленый цвет для кнопки */
+  border: 1px solid #28a745;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 3px;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+}
+
+.userButton:hover {
+  background-color: #218838; /* Темно-зеленый цвет при наведении */
+  transition: opacity 0.3s;
+}
+
+.mainMenu {
+  display: flex;
+  padding: 2rem 84px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #101010;
+}
+
+.nav {
+  justify-content: space-around;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.menuItem {
+  margin: 0 1rem;
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+  padding: 0;
+  gap: 8px;
+  position: relative;
+}
+
+.menuLink {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: roboto;
+}
+
+.menuLink:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 11px;
+}
+
+.menuIconBar {
+  width: 33px; /* Ширина полосок */
+  height: 2px; /* Высота полосок */
+  background-color: #d9d9d9;
+  border-radius: 3px; 
+}
+
+.dropdownIcon {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid white;
+  border-radius: 1px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #101010;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.dropdownItem {
+  padding: 0.5rem 1rem;
+}
+
+.dropdownLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdownLink:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 1004px) {
+  .nav {
+    display: none;
+  }
+  .mainMenu {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 867px) {
+  .topBar {
+    padding: 0.5rem 24px;
+    height: 100%;
+    flex-direction: column;
+    padding: 0.5rem 24px;
+  }
+  .socialIcons {
+    margin: 10px;
+  }
+  .userActions {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainMenu {
+    padding: 0.5rem 16px;
+    flex-direction: column;
+  }
+  .links {
+    gap: 10px;
+  }
+  .userIcons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 477px) {
+  .userActions {
+    flex-direction: column;
+  }
+}
+
+/* Добавьте эти стили для мобильного меню */
+.menuIcon {
+  /* display: none; */
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 1004px) {
+  .menuIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .menuIconOpen .menuIconBar:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menuIconOpen .menuIconBar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuIconOpen .menuIconBar:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .menuIconBar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .mobileMenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #101010;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .mobileMenuOpen {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileMenuItem {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobileMenuItem:last-child {
+    border-bottom: none;
+  }
+
+  .mobileMenuLink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: roboto;
+    display: block;
+  }
+}
